@@ -1,0 +1,349 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    text-align: center;   
+      
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), #0c0d0f no-repeat;
+    /* background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(/images/space1.jpg); */
+    /* background: linear-gradient(to right top, rgba(243, 88, 5, 0.974), #1d25ffdf, #0c0d0f), #0c0d0f no-repeat; */
+    background-color: #121212;
+    max-width: max-content;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.biglogo{
+    max-width: 80%;
+    margin: 13% 0 0 0;
+    text-align: center;
+    padding-top: 10%;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+}
+
+.comingSoon{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2.3rem;
+    position: absolute;
+    right: 27%;
+    top: 70%;
+   
+}
+
+.display, .about_container, .faq, .contact{
+    height: 80vh;
+    width: 80%;
+    padding: 20px;
+}
+
+
+.display{
+    /* background: linear-gradient(0deg, rgba(0, 0, 0 ,0.95) ,  rgba(0, 0, 0 ,0.63),  rgba(0, 0, 0 ,0.38),  rgba(0, 0, 0 ,0.65) ) ,url('/images/Display1.png') no-repeat;  */
+    /* background: url('/images/Display.png') no-repeat ; */
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/space2.jpg) no-repeat ;
+    width: 100%;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+}
+
+.gradient {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    height: 20%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.about_info{
+    padding-right: 20px;
+    height: 400px;
+    width: 100%;
+    background-color: #121212;
+    /* background-image: url(/images/polygon-scatter-haikei.svg); */
+    box-shadow: 4px 4px 10px #000, -2px -2px 10px #000;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+}
+
+.about{
+    background-image: url(/images/polygon-scatter-haikei\ \(2\).svg);
+}
+
+.about_info p{
+    margin: 0 1% 0 8%;
+    font-size: 1.2rem;
+}
+
+.about_info .fa-solid{
+    font-size: 50px;
+    color: #f1f1f1;
+    line-height: 100px;
+}
+
+.play_button{
+    margin: 5% 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.play_button p{
+    margin-left: 90px;
+    display: inline; 
+    padding-top: 5%;
+}
+
+.play_btn_animation{
+    color: #f69332;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    /* right: 0; */
+    top: 0;
+    bottom: 10;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.play_btn_animation:before, .play_btn_animation:after{
+    content: "";
+    position: absolute;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    animation: animate 2s linear infinite;
+    opacity: 0;
+}
+
+.play_btn_animation:after{
+    animation-delay: 0.5s;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: scale(.5);
+    }
+    50%
+    {
+        opacity: 1;
+        transform: scale(.5);
+    }
+    100%
+    {
+        transform: scale(1.5);
+    }
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    filter: invert(i);
+    max-width: 24px;
+}
+
+ .about{
+    width: 100%;
+    height: 90vh;
+    /* background: linear-gradient(270deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/wave-haike.png) no-repeat; */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-challengers{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_container h1, .about-challengers h1{
+    margin: 0% 0 5%;
+    border-bottom: 3px solid #f69332;
+    width: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-transform: uppercase;
+}
+
+
+.h1_centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    width: 100%;
+    height: 100px;
+    padding-top: 30px;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #f1f1f1;
+} 
+
+.about-challengers{
+    padding: 50px 0 40px 0;
+}
+
+.about-challengers-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #121212;
+}
+
+.challengers-logo-image-container{
+    height: 300px;
+    width: 350px;
+}
+
+.about-challengers-text{
+    width: 500px;
+    text-align: left;
+    padding: 10px 20px;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.05);
+    backdrop-filter: blur(5px);
+    max-width: 40vw;
+    margin: 0 2vw;
+    height: 260px;
+}
+
+.sahyadri-logo{
+    height: 90%;
+}
+
+.about-challengers-text{
+    font-size: 1.1rem;
+}
+
+
+
+
+/* media queries */
+@media screen and
+(max-width: 600px) {
+    .navMenu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navBarContent label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #toggler:checked ~ .navMenu{
+        max-height: 100%;
+    }
+}   
+
+.sponsor{
+    height: 500px;
+    padding: 100px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sponsor-text{
+    margin-left: 20%;
+    padding-top: 7%;
+}
+
+.sponsor-text h2{
+    font-size: 36px;
+}
+
+.sponsor-text p{
+    font-size: 20px;
+    line-height: 3;
+}
+
+.sponsor-text a{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+.vertical_bar {
+    height: 400px;
+    width: 3%;
+    background-color: rgb(116, 116, 116);
+    border-radius: 10px 0 0 10px;
+    margin-left: 0;
+}
